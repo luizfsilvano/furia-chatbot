@@ -1,13 +1,17 @@
 package com.furia.chatbot.domain.tracker;
 
-public interface InteractionLogger {
-    void incrementMessageCount();
+import com.furia.chatbot.domain.model.InteractionLog;
 
-    void incrementFallbackUsage();
+import java.util.List;
+
+public interface InteractionLogger {
 
     void logInteraction(String message, String botResponse, boolean wasFallback);
 
     int getTotalMessages();
 
     int getFallbackUsage();
+
+    List<InteractionLog> getLogs();
+
 }
