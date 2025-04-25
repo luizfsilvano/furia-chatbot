@@ -1,35 +1,45 @@
 package com.furia.chatbot.infrastructure.tracker;
 
+import com.furia.chatbot.domain.model.InteractionLog;
 import com.furia.chatbot.domain.tracker.InteractionLogger;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class InteractionLoggerImpl implements InteractionLogger {
-    @Override
-    public void incrementMessageCount()
-    {
-        // TODO: Count messages
-    }
+
+    private final List<InteractionLog> logList = new ArrayList<>();
+    private int messageCount = 0;
+    private int fallbackCount = 0;
 
     @Override
-    public void incrementFallbackUsage()
+    public void logInteraction(String message, String botResponse, boolean wasFallback)
     {
-        // TODO: Count Fallbacks
-    }
-
-    @Override
-    public void logInteraction(String message, String botResponse, boolean wasFallback) {
-        // TODO: Log Interaction
+        logList.add(new InteractionLog(message, botResponse, LocalDateTime.now(), wasFallback));
+        messageCount++;
+        if (wasFallback)
+        {
+            fallbackCount++;
+        }
     }
 
     @Override
     public int getTotalMessages() {
-        return 0;
+        return getTotalMessages();
     }
 
     @Override
     public int getFallbackUsage() {
-        return 0;
+        return getFallbackUsage();
+    }
+
+    @Override
+    public List<InteractionLog> getLogs()
+    {
+        return new ArrayList<>(logList);
     }
 
 
