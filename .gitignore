@@ -16,7 +16,7 @@ D:\Dev\Repositorios\furia-chatbot\src\main\resources\application.properties
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
+backend/.idea
 *.iws
 *.iml
 *.ipr
