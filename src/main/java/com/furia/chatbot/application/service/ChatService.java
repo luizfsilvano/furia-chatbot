@@ -16,14 +16,15 @@ public class ChatService {
 
     public String handleUserMessage(String message)
     {
-        /* TODO: Try to search with gemini API
-                 If gets an error, pick up the fallback
-                 Logging interaction
-                 Return response
-         */
-        return null;
+        try {
+            String response = geminiGateway.getResponse(message);
+            interactionLogger.logInteraction(message, response, false);
+            return response;
+        }
+        catch(Exception e) {
+            String fallback = fallbackRepository.getFallbackResponse();
+            interactionLogger.logInteraction(message, fallback, true);
+            return fallback;
+        }
     }
-
-
-
 }

@@ -4,7 +4,7 @@ import com.furia.chatbot.domain.tracker.InteractionLogger;
 import org.springframework.stereotype.Component;
 
 @Component
-public class InteractionLoggerImpl  implements InteractionLogger {
+public class InteractionLoggerImpl implements InteractionLogger {
     @Override
     public void incrementMessageCount()
     {
@@ -15,6 +15,11 @@ public class InteractionLoggerImpl  implements InteractionLogger {
     public void incrementFallbackUsage()
     {
         // TODO: Count Fallbacks
+    }
+
+    @Override
+    public void logInteraction(String message, String botResponse, boolean wasFallback) {
+        // TODO: Log Interaction
     }
 
     @Override

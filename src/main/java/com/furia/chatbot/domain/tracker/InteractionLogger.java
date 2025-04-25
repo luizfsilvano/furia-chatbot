@@ -5,6 +5,8 @@ public interface InteractionLogger {
 
     void incrementFallbackUsage();
 
+    void logInteraction(String message, String botResponse, boolean wasFallback);
+
     int getTotalMessages();
 
     int getFallbackUsage();
