@@ -18,7 +18,7 @@ public class GeminiClientImpl implements GeminiGateway {
     @Override
     public String getResponse(String userMessage)
     {
-        String url = "https://generativelanguage.googleapis.com/v1beta/modsels/gemini-2.0-flash-lite:generateContent?key=%s"
+        String url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-lite:generateContent?key=%s"
                 .formatted(API_KEY);
 
         HttpHeaders headers = new HttpHeaders();
