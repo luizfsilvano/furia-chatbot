@@ -1,5 +1,5 @@
 package com.furia.chatbot.domain.repository;
 
 public interface FallbackRepository {
-    String getRandomFallback();
+    String getFallbackResponse();
 }
