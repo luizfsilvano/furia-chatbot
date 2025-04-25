@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class FallbackRepositoryImpl implements FallbackRepository {
     @Override
-    public String getRandomFallback()
+    public String getFallbackResponse()
     {
         // TODO: Return fallback from memory or local storage
         return null;
