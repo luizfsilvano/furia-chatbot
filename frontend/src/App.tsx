@@ -8,7 +8,7 @@ function App() {
   const [messages, setMessages] = useState<
     { text: string; sender: "user" | "bot" }[]
   >([]);
-  const [isLoading, setIsLoading] = useState(false); // Adiciona estado para controle de loading
+  const [] = useState(false); // Adiciona estado para controle de loading
 
   const handleSend = async () => {
     if (message.trim() === "") return;
@@ -24,12 +24,9 @@ function App() {
     };
     setMessages((prev) => [...prev, loadingMessage]);
 
-    // 3. Define o estado de loading como verdadeiro
-    setIsLoading(true);
-
     try {
       // 4. Envia a mensagem para o backend para o Gemini API
-      const response = await axios.post("http://localhost:8080/api/v1/chat", {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}`, {
         message,
       });
 
@@ -59,8 +56,10 @@ function App() {
         return updatedMessages;
       });
     } finally {
-      // 7. Define o estado de loading como falso após a resposta ser recebida
-      setIsLoading(false);
+      // 7. Remove a mensagem de loading após 2 segundos
+      setTimeout(() => {
+        setMessages((prev) => prev.filter((msg) => msg.text !== "loading"));
+      }, 2000);
     }
   };
 
