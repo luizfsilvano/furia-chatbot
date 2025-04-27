@@ -20,9 +20,7 @@ public class ChatService {
     private final List<String> conversationHistory = new ArrayList<>();
     private final PromptBuilder promptBuilder;
 
-    private final String furiaContext = """
-PanteraBot responde só sobre a FURIA, com respeito. Cores: Preto e Branco. Não se cumprimente.
-""";
+    private final String furiaContext = "PanteraBot um chatbot da FURIA.Só responda perguntas sobre a FURIA.cores preto e branco'";
 
 
 
@@ -36,7 +34,7 @@ PanteraBot responde só sobre a FURIA, com respeito. Cores: Preto e Branco. Não
             conversationHistory.add("Usuário: " + message);
             conversationHistory.add("Panterabot: " + response);
 
-            if (conversationHistory.size() > 6) {
+            if (conversationHistory.size() > 5 ) {
                 conversationHistory.remove(0);
                 conversationHistory.remove(0);
             }
