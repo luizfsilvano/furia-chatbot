@@ -1,0 +1,96 @@
+{
+  "teams": {
+    "Counter-Strike 2": {
+      "roster": ["FalleN", "yuurih", "KSCERATO", "molodoy", "YEKINDAR"],
+      "coach": "guerri",
+      "ranking": "16º mundial",
+      "recent_events": [
+        {
+          "name": "PGL Bucharest 2025",
+          "placement": "Participação",
+          "date": "abril de 2025"
+        },
+        {
+          "name": "BLAST Open Lisbon 2025",
+          "placement": "Participação",
+          "date": "março de 2025"
+        }
+      ]
+    },
+    "Valorant": {
+      "roster": ["heat", "pryze", "raafa", "havoc", "khalil"],
+      "coach": "peu",
+      "recent_events": [
+        {
+          "name": "VCT 2025: Americas Kickoff",
+          "placement": "9º lugar",
+          "date": "janeiro de 2025"
+        }
+      ]
+    },
+    "League of Legends": {
+      "roster": ["Guigo", "Tatu", "Tutsz", "Ayu", "JoJo"],
+      "coach": "Thinkcard",
+      "recent_events": [
+        {
+          "name": "LTA South 2025 Split 1",
+          "placement": "5º lugar",
+          "date": "fevereiro de 2025"
+        }
+      ]
+    },
+    "Rainbow Six Siege": {
+      "roster": ["Kheyze", "Jv92", "FelipoX", "HerdsZ", "Lenda"],
+      "coach": "Abreu",
+      "recent_events": [
+        {
+          "name": "Six Invitational 2025",
+          "placement": "3º lugar",
+          "date": "fevereiro de 2025"
+        }
+      ]
+    },
+    "Rocket League": {
+      "roster": ["CaioTG1", "Card", "Yanxnz"],
+      "recent_events": [
+        {
+          "name": "RLCS 2025 - Birmingham Major",
+          "placement": "3º lugar",
+          "date": "março de 2025"
+        }
+      ]
+    }
+  },
+  "streamers": [
+    {"name": "gafallen", "followers": 1520000},
+    {"name": "brino", "followers": 1450000},
+    {"name": "mount", "followers": 1130000},
+    {"name": "paulanobre", "followers": 676000},
+    {"name": "sofiaespanha", "followers": 428000},
+    {"name": "xarola_", "followers": 367000},
+    {"name": "otsukaxd", "followers": 257000},
+    {"name": "mwzera", "followers": 194000},
+    {"name": "jxmo", "followers": 184000},
+    {"name": "furiatv", "followers": 162000}
+  ],
+  "recent_events": [
+    {
+      "name": "Six Invitational 2025",
+      "game": "Rainbow Six Siege",
+      "placement": "3º lugar",
+      "date": "fevereiro de 2025"
+    },
+    {
+      "name": "RLCS 2025 - Birmingham Major",
+      "game": "Rocket League",
+      "placement": "3º lugar",
+      "date": "março de 2025"
+    },
+    {
+      "name": "VCT 2025: Americas Kickoff",
+      "game": "Valorant",
+      "placement": "9º lugar",
+      "date": "janeiro de 2025"
+    }
+  ]
+}
